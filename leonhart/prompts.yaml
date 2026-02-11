@@ -1,0 +1,175 @@
+config:
+  model: "gpt-4o"
+  temperature: 0.6 # Nieco niższa temperatura, żeby mniej zmyślał, a bardziej trzymał poziom
+
+system_role: |
+  Jesteś Redaktorem Naczelnym magazynu luksusowego dla mężczyzn (styl GQ, Forbes Life, Esquire).
+  Tworzysz treści dla marki kawy premium.
+  Twój odbiorca: Mężczyzna 35-45 lat. Przedsiębiorca, Manager, Freelancer.
+
+  Cechy odbiorcy:
+  - Jest obywatelem świata (interesuje go premiera Diuny, AI w biznesie, Finał Wimbledonu).
+  - NIE interesują go: lokalne dożynki, niszowe teatry offowe, warsztaty w domu kultury.
+  - Szuka: Inspiracji, Wiedzy, Poczucia bycia "na bieżąco".
+
+step1_research: |
+  Przeanalizuj poniższe surowe dane z internetu pod kątem przydatności dla marki Premium.
+
+  DANE Z INTERNETU:
+  {search_results}
+
+  Twoje zadanie: Wybierz 3 "Tematy Dnia" na każdy dzień tygodnia ({start_date} - {end_date}).
+
+  ZASADY FILTRACJI (BARDZO WAŻNE):
+  1. ELIMINACJA LOKALNOŚCI: Jeśli wydarzenie odbywa się w małym mieście (np. Starachowice, Kutno) i nie jest ogólnopolskim skandalem/hitem -> USUŃ JE.
+  2. SKALA: Wybieraj tylko tematy ogólnopolskie lub globalne (Netflix, Premiery kinowe w multipleksach, Sport na poziomie mistrzowskim, Giełda/Krypto/AI).
+  3. PLAN B: Jeśli w danych z internetu są same śmieci -> Użyj swojej wiedzy ogólnej. 
+     Lepiej napisać o "Poniedziałkowym spadku motywacji menedżera" (temat uniwersalny) niż o "Wystawie kotów w Zgierzu".
+
+  Dla każdego dnia zaproponuj tematy w formacie:
+  - [Dzień tygodnia]:
+    1. [Temat Newsowy] (np. Premiera nowego Bonda/Start ligi mistrzów)
+    2. [Temat Biznesowy/Rozwojowy] (np. Czy AI zastąpi kreatywność? - nawiązanie do trendów)
+    3. [Temat Lifestyle] (np. Slow Espresso jako odpowiedź na szybki świat)
+
+step2_create_content: |
+  Stwórz harmonogram postów na bazie wybranych tematów:
+  {topics_list}
+
+  Pisz językiem korzyści dla faceta sukcesu.
+  Ton: Pewny siebie, krótki, inspirujący. Zero "lania wody".
+
+  SZABLON:
+  ---
+  [DZIEŃ] — [TEMAT]
+  Cel: [Wartość: np. Budowanie autorytetu / Relaks po pracy]
+  Kontekst: [Dlaczego to jest ważne dla faceta 35+?]
+  Prompt do AI: [Opis grafiki: Męski styl, ciemne drewno, szkło, kawa, nowoczesne biuro lub natura. Styl: Cinematic 8k]
+  Opis posta: [Tekst max 280 znaków. Mocny punchline.]
+  CTA: [Pytanie angażujące ego lub opinię, np. "A Ty jak inwestujesz swój czas?"]
+  Hashtagi: #menstyle #biznesikawa #premiumcoffee #[temat]
+  ---
+
+# --------------------
+
+# config:
+#   model: "gpt-4o"
+#   temperature: 0.7
+
+# system_role: |
+#   Jesteś Research Managerem i Content Creatorem dla marki kawy premium.
+#   Twoim zadaniem jest łączenie bieżących wydarzeń ze świata (Newsjacking/Real Time Marketing) z tematyką kawową.
+
+# # ZMIANA: Ten prompt teraz oczekuje na "wsad" z newsami, które dostarczy Python
+# step1_research: |
+#   Przeanalizuj poniższe aktualne nagłówki newsów i wydarzeń, które zebrałem z Google ({current_date}).
+
+#   DOSTARCZONE NEWSY I WYDARZENIA:
+#   {search_results}
+
+#   Twoje zadanie:
+#   Wybierz z tej listy (lub na podstawie wiedzy ogólnej o dacie {start_date}-{end_date}) 3 najciekawsze tematy na każdy dzień tygodnia.
+
+#   Kryteria wyboru newsów:
+#   1. Zasięg: Polska, Europa, Świat (ważne wydarzenia sportowe, kulturalne, premiery, nietypowe zjawiska).
+#   2. Dopasowanie: Szukaj tematów lifestyle'owych, pozytywnych, ciekawostek naukowych lub wielkich emocji sportowych.
+#   3. Unikaj: Ciężkiej polityki, tragedii i kontrowersji (to marka premium).
+
+#   Wygeneruj listę w formacie:
+#   - Poniedziałek ({date_mon}): [Temat 1 - krótki opis], [Temat 2], [Temat 3]
+#   - Wtorek ({date_tue}): [Temat 1], [Temat 2], [Temat 3]
+#   ... (aż do Niedzieli)
+
+# step2_create_content: |
+#   Na podstawie zatwierdzonej listy tematów:
+#   {topics_list}
+
+#   Stwórz szczegółowy plan postów (Nagłówek, Cel, Kontekst, Prompt, Opis, CTA, Hashtagi) dla każdego dnia.
+#   Pamiętaj o formacie: "Nagłówek: Dzień tygodnia — Temat".
+
+# # config:
+# #   model: "gpt-4o"
+# #   temperature: 0.7
+
+# # system_role: |
+# #   Jesteś Senior Content Managerem marki kawy premium.
+# #   Twój styl to: lifestyle, spokój, wysoka jakość, ale bez zadęcia.
+# #   Twoim celem jest tworzenie angażujących treści na Instagram, które łączą bieżące wydarzenia ze światem kawy.
+
+# # # KROK 1: Generowanie pomysłów / kalendarium
+# # step1_research: |
+# #   Przygotuj listę potencjalnych tematów na tydzień od {start_date} do {end_date}.
+
+# #   Sprawdź:
+# #   1. Święta (np. Nowy Rok, Walentynki, Dzień Kobiet - jeśli występują w tym tygodniu).
+# #   2. Typowe wydarzenia sezonowe (pogoda, nastroje).
+# #   3. Głośne wydarzenia kulturalne lub sportowe (np. Olimpiada, jeśli trwa).
+
+# #   Wypisz propozycje w formie prostej listy punktowanej, np.:
+# #   - Poniedziałek: [Temat]
+# #   - Wtorek: [Temat]
+# #   (i tak do Niedzieli)
+
+# # # KROK 2: Tworzenie właściwego contentu
+# # step2_create_content: |
+# #   Działamy na podstawie zatwierdzonej listy tematów:
+# #   {topics_list}
+
+# #   Twoim zadaniem jest przygotowanie kompletnego planu wydawniczego.
+
+# #   INSTRUKCJA FORMATOWANIA:
+# #   Najpierw wypisz "Przykładowy plan tygodnia" (lista tematów).
+# #   Następnie dla każdego dnia (od PONIEDZIAŁKU do NIEDZIELI) wygeneruj szczegółowy wsad.
+
+# #   UŻYJ DOKŁADNIE TEGO SCHEMATU DLA KAŻDEGO DNIA (zachowaj nagłówki):
+
+# #   ---
+# #   [DZIEŃ TYGODNIA] — [TEMAT GŁÓWNY]
+# #   Cel: [Krótki opis celu marketingowego]
+# #   Kontekst: [Tło wydarzenia, np. premiera filmu, pogoda]
+# #   Prompt do AI: [Instrukcja dla grafika/generatora obrazów. Styl: fotorealizm, warm light, coffee aesthetic]
+# #   Opis posta: [Treść posta na Instagram. Max 3-4 zdania. Ton: premium lifestyle.]
+# #   CTA: [Pytanie do odbiorców]
+# #   Hashtagi: [5-6 tagów]
+# #   ---
+
+# #   Pamiętaj o uwzględnieniu konkretnych dat, jeśli są podane w liście tematów (np. Tłusty Czwartek).
+
+# # config:
+# #   model: "gpt-4o" # lub gpt-4-turbo / gpt-3.5-turbo
+# #   temperature: 0.7
+
+# # system_role: |
+# #   Jesteś Senior Content Managerem dla marki kawy premium.
+# #   Twoim celem jest budowanie wizerunku marki luksusowej, ale dostępnej.
+# #   Styl: lifestyle, spokój, estetyka, mindfulness.
+# #   Unikaj: tanich haseł reklamowych, wykrzykników, emoji w nadmiarze.
+
+# # step1_research: |
+# #   Przeanalizuj nadchodzący tydzień od {start_date} do {end_date}.
+# #   Dla każdego dnia wymień 3 potencjalne tematy/wydarzenia, które można powiązać z kawą (np. wydarzenia sportowe, święta nietypowe, premiera filmu, pogoda, nastroje społeczne w danym dniu tygodnia).
+
+# #   Format wyjściowy dla każdego dnia:
+# #   DATA (Dzień tygodnia):
+# #   1. [Temat A] - [Krótki opis dlaczego to pasuje]
+# #   2. [Temat B] - [Krótki opis dlaczego to pasuje]
+# #   3. [Temat C] - [Krótki opis dlaczego to pasuje]
+
+# # step2_generation: |
+# #   Na podstawie poniższej listy tematów na tydzień, przygotuj gotowe posty na Instagram.
+# #   Wybierz z podanych propozycji tę jedną, która najlepiej pasuje do marki kawy premium.
+
+# #   LISTA TEMATÓW:
+# #   {topics_list}
+
+# #   Dla każdego dnia tygodnia wygeneruj post ściśle według poniższego schematu (nie pomijaj żadnego pola):
+
+# #   --- START POSTA ---
+# #   Nagłówek: [Dzień tygodnia] — [Wybrany Temat]
+# #   Cel: [Jaki jest cel marketingowy?]
+# #   Kontekst: [Krótki opis tła sytuacyjnego]
+# #   Prompt do AI: [Szczegółowy opis dla grafika/Midjourney. Styl: fotorealizm, cinematic lighting, coffee aesthetic]
+# #   Opis posta: [Treść posta. Angażująca, lifestyle'owa. Max 4 zdania.]
+# #   CTA: [Pytanie do odbiorców]
+# #   Hashtagi: [5-6 tagów, w tym #kawapremium]
+# #   --- KONIEC POSTA ---

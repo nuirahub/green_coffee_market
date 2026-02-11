@@ -1,0 +1,24 @@
+# Klucze API i zmienne środowiskowe
+.env
+*.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Pliki tymczasowe
+*.log
+*.tmp
