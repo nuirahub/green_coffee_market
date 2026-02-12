@@ -1,0 +1,177 @@
+﻿url,timestamp,dns_exists,http_status,vlm_analysis,screenshot_path,error
+https://greenbean.com.pl/,06:05:08,True,200.0,"```json
+{
+  ""status"": ""active"",
+  ""site_type"": ""online_shop"",
+  ""is_informational"": false,
+  ""has_market_news"": false,
+  ""is_green_coffee_focused"": true,
+  ""monitoring_value"": 0,
+  ""main_content"": ""Strona internetowa sklepu internetowego GREENBEAN, oferującego do sprzedaży różne odmiany kawy zielonej (Arabica, Robusta) oraz kawy na zamówienie. Skupia się na produktach i promocjach, nie ma widocznych sekcji informacyjnych o rynku."",
+  ""keywords_found"": [
+    ""kawa zielona"",
+    ""Arabica"",
+    ""Robusta"",
+    ""Monsooned Malabar"",
+    ""promocje""
+  ],
+  ""update_frequency"": ""unknown"",
+  ""recommendation"": ""poor""
+}
+```",screens/greenbean.com.pl_.jpg,
+https://bero.pl/,06:05:08,True,200.0,"```json
+{
+  ""status"": ""active"",
+  ""site_type"": ""corporate"",
+  ""is_informational"": false,
+  ""has_market_news"": false,
+  ""is_green_coffee_focused"": false,
+  ""monitoring_value"": 0,
+  ""main_content"": ""Strona główna jest pusta, widoczny jest jedynie nagłówek z logo firmy 'Bero Polska', menu nawigacyjne oraz ikony mediów społecznościowych. Brak jakiejkolwiek treści na stronie głównej uniemożliwia ocenę jej zawartości."",
+  ""keywords_found"": [],
+  ""update_frequency"": ""unknown"",
+  ""recommendation"": ""poor""
+}
+```",screens/bero.pl_.jpg,
+https://www.sweetmarias.com/,06:05:08,True,200.0,"```json
+{
+  ""status"": ""active"",
+  ""site_type"": ""online_shop"",
+  ""is_informational"": false,
+  ""has_market_news"": false,
+  ""is_green_coffee_focused"": true,
+  ""monitoring_value"": 0,
+  ""main_content"": ""Strona internetowa 'Sweet Maria's' to sklep internetowy oferujący zieloną kawę do palenia w domu, z widocznym naciskiem na bezpośrednie pozyskiwanie z konkretnych regionów, np. Gwatemali."",
+  ""keywords_found"": [
+    ""Green Coffee"",
+    ""Home Coffee Roasting"",
+    ""Guatemalan coffee"",
+    ""Sweet Maria's"",
+    ""Brewing""
+  ],
+  ""update_frequency"": ""unknown"",
+  ""recommendation"": ""poor""
+}
+```",screens/www.sweetmarias.com_.jpg,
+https://www.cafeimports.com/,06:05:08,True,200.0,"```json
+{
+  ""status"": ""active"",
+  ""site_type"": ""corporate"",
+  ""is_informational"": false,
+  ""has_market_news"": false,
+  ""is_green_coffee_focused"": true,
+  ""monitoring_value"": 0,
+  ""main_content"": ""Strona przedstawia logo 'Cafe Imports' wraz ze zdjęciami kawy w różnych fazach uprawy (owoce na krzewie, młode sadzonki). Wskazuje na działalność importową i rynki działania (Australia, Europa, Ameryka Północna)."",
+  ""keywords_found"": [
+    ""Cafe Imports"",
+    ""coffee"",
+    ""green coffee"",
+    ""importer"",
+    ""agriculture""
+  ],
+  ""update_frequency"": ""static"",
+  ""recommendation"": ""poor""
+}
+```",screens/www.cafeimports.com_.jpg,
+https://perfectdailygrind.com/,06:05:08,False,,,,Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https:...
+https://royalcoffee.com/,06:05:08,True,200.0,"```json
+{
+  ""status"": ""active"",
+  ""site_type"": ""b2b_platform"",
+  ""is_informational"": false,
+  ""has_market_news"": false,
+  ""is_green_coffee_focused"": true,
+  ""monitoring_value"": 4,
+  ""main_content"": ""Strona internetowa importera i sprzedawcy specjalistycznych ziaren kawy zielonej. Głównym celem jest sprzedaż produktów, co widać po przycisku 'Shop All Coffee' i ikonie koszyka. Posiada również sekcje 'Resources' i 'Blog', które mogą zawierać treści informacyjne."",
+  ""keywords_found"": [
+    ""green coffee"",
+    ""specialty coffee"",
+    ""coffee beans"",
+    ""importer"",
+    ""buy coffee""
+  ],
+  ""update_frequency"": ""unknown"",
+  ""recommendation"": ""poor""
+}
+```",screens/royalcoffee.com_.jpg,
+https://www.genuineorigin.com/,06:05:15,True,200.0,"{
+    ""status"": ""active"",
+    ""site_type"": ""other"",
+    ""is_informational"": false,
+    ""has_market_news"": false,
+    ""is_green_coffee_focused"": false,
+    ""monitoring_value"": 0,
+    ""main_content"": ""The screenshot displays only a standard cookie consent banner. No actual website content, navigation, or branding is visible to determine the site's purpose, topic, or content type."",
+    ""keywords_found"": [],
+    ""update_frequency"": ""unknown"",
+    ""recommendation"": ""poor""
+}",screens/www.genuineorigin.com_.jpg,
+https://enaturalnie.pl/zielona-kawa_151,06:05:18,True,200.0,"VLM Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash
+Please retry in 39.813256961s. [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_content_free_tier_requests""
+  quota_id: ""GenerateRequestsPerMinutePerProjectPerModel-FreeTier""
+  quota_dimensions {
+    key: ""model""
+    value: ""gemini-2.5-flash""
+  }
+  quota_dimensions {
+    key: ""location""
+    value: ""global""
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 39
+}
+]",screens/enaturalnie.pl_zielona-kawa_151.jpg,
+https://kaleidoroasters.com/,06:05:19,True,200.0,"VLM Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash
+Please retry in 38.908841508s. [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_content_free_tier_requests""
+  quota_id: ""GenerateRequestsPerMinutePerProjectPerModel-FreeTier""
+  quota_dimensions {
+    key: ""model""
+    value: ""gemini-2.5-flash""
+  }
+  quota_dimensions {
+    key: ""location""
+    value: ""global""
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 38
+}
+]",screens/kaleidoroasters.com_.jpg,
+https://coffeecourses.com/,06:05:20,True,200.0,"VLM Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash
+Please retry in 37.111097409s. [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_content_free_tier_requests""
+  quota_id: ""GenerateRequestsPerMinutePerProjectPerModel-FreeTier""
+  quota_dimensions {
+    key: ""model""
+    value: ""gemini-2.5-flash""
+  }
+  quota_dimensions {
+    key: ""location""
+    value: ""global""
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 37
+}
+]",screens/coffeecourses.com_.jpg,

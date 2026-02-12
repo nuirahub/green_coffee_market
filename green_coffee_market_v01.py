@@ -3,15 +3,18 @@ import os
 from datetime import datetime
 
 import google.generativeai as genai
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # --- KONFIGURACJA ---
-API_KEY = "TWOJ_KLUCZ_API_GEMINI"  # Wstaw swój klucz API
+API_KEY = os.getenv("GEMINI_API_KEY")  # Wstaw swój klucz API
 HISTORY_FILE = "market_history.json"
 REPORT_DIR = "raporty_kawa"
 
 # Konfiguracja klienta Gemini
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel("gemini-2.0-flash")  # Używamy szybkiego modelu
+model = genai.GenerativeModel("gemini-2.5-flash")  # Używamy szybkiego modelu
 
 
 class CoffeeMarketReporter:
